@@ -12,22 +12,22 @@ import java.util.List;
 @Transactional
 public class EducacionService {
     private final EducacionRepo educacionRepo;
-@Autowired
+    @Autowired
     public EducacionService(EducacionRepo educacionRepo) {
         this.educacionRepo = educacionRepo;
     }
 
     public Educacion addEducacion(Educacion educacion){
-    return  educacionRepo.save(educacion);
+        return  educacionRepo.save(educacion);
     }
     public List<Educacion> buscarEducaciones(){
-    return educacionRepo.findAll();
+        return educacionRepo.findAll();
 
     }
     public Educacion editarEducacion(Educacion educacion){
-    return educacionRepo.save(educacion);
+        return educacionRepo.save(educacion);
     }
     public  void borrarEducacion(Long id){
-    educacionRepo.deleteById(id);
+        educacionRepo.deleteById(id);
     }
 }

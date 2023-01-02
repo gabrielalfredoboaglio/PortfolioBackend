@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-
+@Table(name = "skill")
 public class Skill implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -35,8 +35,8 @@ public class Usuario implements Serializable {
     private List<Skill> skillsList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
     private List<Experiencia> experienciaList;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idProy")
-    private List<Proyecto> proyectoList;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "idPro")
+    private List<Project> proyectoList;
 
     public Usuario() {
     }

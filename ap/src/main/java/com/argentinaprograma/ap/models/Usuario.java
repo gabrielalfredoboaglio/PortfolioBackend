@@ -22,20 +22,26 @@ public class Usuario implements Serializable {
     private String localidad;
 
     private String fechaNac;
+
+    private String fotoHeader;
+
+    private String profesionHeader;
+
+    private String nombreHeader;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idEdu")
     private List<Educacion> educacionList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkill")
-    private List<Skills> skillsList;
+    private List<Skill> skillsList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idExp")
     private List<Experiencia> experienciaList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idProy")
     private List<Proyecto> proyectoList;
 
-
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String localidad, String fechaNac, List<Educacion> educacionList, List<Skills> skillsList, List<Experiencia> experienciaList, List<Proyecto> proyectoList) {
+    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String localidad, String fechaNac, String fotoHeader, String profesionHeader, String nombreHeader) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -45,11 +51,11 @@ public class Usuario implements Serializable {
         this.email = email;
         this.localidad = localidad;
         this.fechaNac = fechaNac;
-        this.educacionList = educacionList;
-        this.skillsList = skillsList;
-        this.experienciaList = experienciaList;
-        this.proyectoList = proyectoList;
+        this.fotoHeader = fotoHeader;
+        this.profesionHeader = profesionHeader;
+        this.nombreHeader = nombreHeader;
     }
+
 
     public Long getId() {
         return id;
@@ -121,5 +127,29 @@ public class Usuario implements Serializable {
 
     public void setFechaNac(String fechaNac) {
         this.fechaNac = fechaNac;
+    }
+
+    public String getFotoHeader() {
+        return fotoHeader;
+    }
+
+    public void setFotoHeader(String fotoHeader) {
+        this.fotoHeader = fotoHeader;
+    }
+
+    public String getProfesionHeader() {
+        return profesionHeader;
+    }
+
+    public void setProfesionHeader(String profesionHeader) {
+        this.profesionHeader = profesionHeader;
+    }
+
+    public String getNombreHeader() {
+        return nombreHeader;
+    }
+
+    public void setNombreHeader(String nombreHeader) {
+        this.nombreHeader = nombreHeader;
     }
 }

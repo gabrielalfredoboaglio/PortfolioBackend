@@ -29,6 +29,8 @@ public class Usuario implements Serializable {
 
     private String nombreHeader;
 
+    private String password;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idEdu")
     private List<Educacion> educacionList;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "idSkill")
@@ -41,7 +43,7 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String localidad, String fechaNac, String fotoHeader, String profesionHeader, String nombreHeader) {
+    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String localidad, String fechaNac, String fotoHeader, String profesionHeader, String nombreHeader, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -54,8 +56,8 @@ public class Usuario implements Serializable {
         this.fotoHeader = fotoHeader;
         this.profesionHeader = profesionHeader;
         this.nombreHeader = nombreHeader;
+        this.password = password;
     }
-
 
     public Long getId() {
         return id;
@@ -151,5 +153,13 @@ public class Usuario implements Serializable {
 
     public void setNombreHeader(String nombreHeader) {
         this.nombreHeader = nombreHeader;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

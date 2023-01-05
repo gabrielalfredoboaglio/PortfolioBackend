@@ -29,6 +29,7 @@ public class ProjectController {
         Project newProject=projectService.addProject(project);
         return new ResponseEntity<>(newProject,HttpStatus.CREATED);
     }
+
     @PutMapping
     public ResponseEntity<Project> updateProject(@RequestBody Project project){
         Project updateProject=projectService.updateProject(project);

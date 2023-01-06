@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-alpine
+FROM amazoncorretto:17.0.0-alpine
 
 MAINTAINER GABITO
 

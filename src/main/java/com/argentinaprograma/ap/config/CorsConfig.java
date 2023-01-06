@@ -12,7 +12,6 @@ public class CorsConfig {
 return new WebMvcConfigurer() {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
 
        registry.addMapping("/login")
                .allowedOrigins("http://https://fronted-argentina-programa.web.app")

@@ -17,7 +17,7 @@ return new WebMvcConfigurer() {
                .allowedOrigins("http://https://fronted-argentina-programa.web.app")
                .allowedMethods("*")
                        .exposedHeaders("*");
-         registry.addMapping("/**");
+
 
                 registry.addMapping("/api/**")
                    .allowedOrigins("http://https://fronted-argentina-programa.web.app")

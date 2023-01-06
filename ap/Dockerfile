@@ -1,8 +1,6 @@
 FROM eclipse-temurin:17-alpine
 
-RUN Mkdir /app
-
-WORKDIR /app
+MAINTAINER GABITO
 
 COPY target/ap-0.0.1-SNAPSHOT.jar ap-0.0.1-SNAPSHOT.jar
 

@@ -1,15 +1,11 @@
-#
-# Build stage
-#
-FROM maven:3.8.2-jdk-17 AS build
-COPY . .
-RUN mvn clean package -Pprod -DskipTests
+FROM eclipse-temurin:17-alpine
 
-#
-# Package stage
-#
-FROM openjdk:11-jdk-slim
-COPY --from=build /target/ap-0.0.1-SNAPSHOT.jar original.jar
-# ENV PORT=8080
+RUN mkdir /app
+
+WORKDIR /app
+
+COPY target/ap-0.0.1-SNAPSHOT.jar /app/original.jar
+
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo.jar"]
+
+CMD java -jar original.jar

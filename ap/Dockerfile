@@ -1,11 +1,7 @@
-FROM eclipse-temurin:17-alpine
+FROM amazoncorretto:17-alpine-jdk
 
-RUN mkdir /app
+MAINTAINER Gabriel
 
-WORKDIR /app
+COPY target/ap-0.0.1-SNAPSHOT.jar ap-0.0.1-SNAPSHOT.jar
 
-COPY target/ap-0.0.1-SNAPSHOT.jar /app/original.jar
-
-EXPOSE 8080
-
-ENTRYPOINT ["java","-jar","ap-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/ap-0.0.1-SNAPSHOT.jar"]

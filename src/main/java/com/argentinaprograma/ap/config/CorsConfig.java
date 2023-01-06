@@ -16,7 +16,7 @@ return new WebMvcConfigurer() {
        registry.addMapping("/login")
                .allowedOrigins("http://https://fronted-argentina-programa.web.app")
                .allowedMethods("*")
-                       .exposedHeaders("*");
+               .exposedHeaders("*");
 
 
                 registry.addMapping("/api/**")

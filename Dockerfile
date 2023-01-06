@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-jdk
+FROM amazoncorretto:19-alpine-jdk
 
 MAINTAINER Gabriel
 

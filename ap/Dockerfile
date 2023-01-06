@@ -8,4 +8,4 @@ COPY target/ap-0.0.1-SNAPSHOT.jar /app/original.jar
 
 EXPOSE 8080
 
-CMD java -jar original.jar
+ENTRYPOINT ["java","-jar","ap-0.0.1-SNAPSHOT.jar"]

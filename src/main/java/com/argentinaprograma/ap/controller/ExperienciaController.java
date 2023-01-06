@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/experiencia")
+@RequestMapping("/api/experiencia")
 @CrossOrigin(origins = "https://fronted-argentina-programa.web.app")
 public class ExperienciaController {
     private final ExperienciaService experienciaService;

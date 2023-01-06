@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
-@RequestMapping("/project")
+@RequestMapping("/api/project")
 @CrossOrigin(origins = "https://fronted-argentina-programa.web.app")
 public class ProjectController {
     @Autowired

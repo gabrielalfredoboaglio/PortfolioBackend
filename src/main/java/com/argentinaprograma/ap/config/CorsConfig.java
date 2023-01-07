@@ -12,25 +12,20 @@ public class CorsConfig {
 return new WebMvcConfigurer() {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-
-        registry.addMapping("/**").allowedOrigins();
+        registry.addMapping("/api/**")
+                .allowedOrigins("https://frontend-ang.web.app/index")
+                .allowedMethods("*")
+                .exposedHeaders("*");
 
         registry.addMapping("/**")
-                .allowedOrigins("http://https://fronted-argentina-programa.web.app")
+                .allowedOrigins("https://frontend-ang.web.app/index")
                 .allowedMethods("*")
                 .exposedHeaders("*");
 
 
-       registry.addMapping("/login")
-               .allowedOrigins("http://https://fronted-argentina-programa.web.app")
-               .allowedMethods("*")
-               .exposedHeaders("*");
 
 
-                registry.addMapping("/api/**")
-                   .allowedOrigins("http://https://fronted-argentina-programa.web.app")
-                        .allowedMethods("*")
-                        .exposedHeaders("*");
+
 
 
 

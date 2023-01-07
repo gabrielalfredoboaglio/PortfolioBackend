@@ -13,12 +13,12 @@ return new WebMvcConfigurer() {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("https://frontend-ang.web.app/index")
+                .allowedOrigins("https://frontend-ang.web.app")
                 .allowedMethods("*")
                 .exposedHeaders("*");
 
         registry.addMapping("/**")
-                .allowedOrigins("https://frontend-ang.web.app/index")
+                .allowedOrigins("https://frontend-ang.web.app")
                 .allowedMethods("*")
                 .exposedHeaders("*");
 

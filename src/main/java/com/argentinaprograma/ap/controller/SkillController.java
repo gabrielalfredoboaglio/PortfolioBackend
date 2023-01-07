@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/skill")
-@CrossOrigin(origins = "https://frontend-ang.web.app/index")
+@CrossOrigin(origins = "https://frontend-ang.web.app")
 public class SkillController {
     @Autowired
     private final SkillService skillService;

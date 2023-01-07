@@ -13,6 +13,12 @@ return new WebMvcConfigurer() {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
 
+        registry.addMapping("/**")
+                .allowedOrigins("http://https://fronted-argentina-programa.web.app")
+                .allowedMethods("*")
+                .exposedHeaders("*");
+
+
        registry.addMapping("/login")
                .allowedOrigins("http://https://fronted-argentina-programa.web.app")
                .allowedMethods("*")

@@ -16,12 +16,12 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
-    @GetMapping("/id/api/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Usuario> obtenerUsuario(@PathVariable("id")Long id){
         Usuario usuario = usuarioService.buscarUsuarioPorID(id);
         return new ResponseEntity<>(usuario, HttpStatus.OK);
     }
-    @PutMapping("/api/update")
+    @PutMapping("/update")
     public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario){
         Usuario updateUsuario=usuarioService.editarUsuario(usuario);
         return new ResponseEntity<>(updateUsuario,HttpStatus.OK);

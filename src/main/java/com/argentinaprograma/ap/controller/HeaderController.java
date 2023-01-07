@@ -16,12 +16,12 @@ public class HeaderController {
         this.headerService = headerService;
     }
 
-    @GetMapping("/id/api/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Header> obtenerHeader(@PathVariable("id")Long id){
         Header header = headerService.buscarHeaderPorID(id);
         return new ResponseEntity<>(header, HttpStatus.OK);
     }
-    @PutMapping("/api/update")
+    @PutMapping("/update")
     public ResponseEntity<Header> editarHeader(@RequestBody Header header){
         Header updateHeader=headerService.editarHeader(header);
         return new ResponseEntity<>(updateHeader,HttpStatus.OK);

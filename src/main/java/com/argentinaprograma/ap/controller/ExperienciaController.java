@@ -17,24 +17,24 @@ public class ExperienciaController {
     public ExperienciaController(ExperienciaService experienciaService) {
         this.experienciaService = experienciaService;
     }
-    @PutMapping("/api/update")
+    @PutMapping("/update")
     public ResponseEntity<Experiencia> editarExperiencia(@RequestBody Experiencia experiencia){
         Experiencia updateExperiencia=experienciaService.editarExperiencia(experiencia);
         return new ResponseEntity<>(updateExperiencia, HttpStatus.OK);
     }
 
-    @GetMapping("/api/all")
+    @GetMapping("/all")
     public ResponseEntity<List<Experiencia>> obtenerExperiencia(){
         List<Experiencia> experiencias=experienciaService.buscarExperiencias();
         return new ResponseEntity<>(experiencias,HttpStatus.OK);
     }
-    @PostMapping("/api/add")
+    @PostMapping("/add")
     public ResponseEntity<Experiencia> crearExperiencia(@RequestBody Experiencia experiencia){
         Experiencia nuevaExperiencia=experienciaService.addExperiencia(experiencia);
         return new ResponseEntity<>(nuevaExperiencia,HttpStatus.CREATED);
     }
 
-    @DeleteMapping("delete/api/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<?> borrarExperiencia(@PathVariable("id") Long id){
         experienciaService.borrarExperiencia(id);
         return new ResponseEntity<>(HttpStatus.OK);

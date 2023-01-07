@@ -17,18 +17,18 @@ private final EducacionService educacionService;
     public EducacionController(EducacionService educacionService) {
         this.educacionService = educacionService;
     }
-    @PutMapping("/api/update")
+    @PutMapping("/update")
     public ResponseEntity<Educacion> editarEducacion(@RequestBody Educacion educacion){
         Educacion updateEducacion=educacionService.editarEducacion(educacion);
         return new ResponseEntity<>(updateEducacion, HttpStatus.OK);
     }
 
-    @GetMapping("/api/all")
+    @GetMapping("/all")
     public ResponseEntity<List<Educacion>> obtenerEducacion(){
         List<Educacion> educaciones=educacionService.buscarEducaciones();
                 return new ResponseEntity<>(educaciones,HttpStatus.OK);
     }
-    @PostMapping("/api/add")
+    @PostMapping("/add")
     public ResponseEntity<Educacion> crearEducacion(@RequestBody Educacion educacion){
         Educacion nuevaEducacion=educacionService.addEducacion(educacion);
         return new ResponseEntity<>(nuevaEducacion,HttpStatus.CREATED);

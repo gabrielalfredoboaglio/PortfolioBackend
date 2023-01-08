@@ -1,3 +1,4 @@
+com\argentinaprograma\ap\config\CorsConfig$1.class
 com\argentinaprograma\ap\models\Usuario.class
 com\argentinaprograma\ap\exception\UserNotFoundException.class
 com\argentinaprograma\ap\repository\HeaderRepo.class
@@ -15,7 +16,7 @@ com\argentinaprograma\ap\repository\ExperienciaRepo.class
 com\argentinaprograma\ap\controller\EducacionController.class
 com\argentinaprograma\ap\controller\UsuarioController.class
 com\argentinaprograma\ap\services\EducacionService.class
-com\argentinaprograma\ap\config\WebConfig.class
+com\argentinaprograma\ap\config\CorsConfig.class
 com\argentinaprograma\ap\controller\SkillController.class
 com\argentinaprograma\ap\services\SkillService.class
 com\argentinaprograma\ap\controller\ProjectController.class

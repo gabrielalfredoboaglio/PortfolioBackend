@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/header")
-@CrossOrigin(origins = "https://frontend-ang.web.app")
+
 public class HeaderController {
     private final HeaderService headerService;
 

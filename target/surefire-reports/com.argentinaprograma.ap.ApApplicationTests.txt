@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.argentinaprograma.ap.ApApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.013 s - in com.argentinaprograma.ap.ApApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.409 s - in com.argentinaprograma.ap.ApApplicationTests

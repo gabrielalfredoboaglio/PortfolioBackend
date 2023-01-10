@@ -20,17 +20,17 @@ public class SkillController {
         this.skillService = skillService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Skill>> getAllSkill(){
         List<Skill> projects=skillService.findAllSkills();
         return new ResponseEntity<>(projects, HttpStatus.OK);
     }
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<Skill> addSkill(@RequestBody Skill skill){
         Skill newSkill=skillService.addSkill(skill);
         return new ResponseEntity<>(newSkill,HttpStatus.CREATED);
     }
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<Skill> updateSkill(@RequestBody Skill project){
         Skill updateSkill=skillService.updateSkill(project);
         return new ResponseEntity<>(updateSkill,HttpStatus.OK);

@@ -19,18 +19,18 @@ public class ProjectController {
         this.projectService = projectService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Project>> getAllProject(){
         List<Project> projects=projectService.findAllProjects();
         return new ResponseEntity<>(projects, HttpStatus.OK);
     }
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<Project> addProject(@RequestBody Project project){
         Project newProject=projectService.addProject(project);
         return new ResponseEntity<>(newProject,HttpStatus.CREATED);
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<Project> updateProject(@RequestBody Project project){
         Project updateProject=projectService.updateProject(project);
         return new ResponseEntity<>(updateProject,HttpStatus.OK);

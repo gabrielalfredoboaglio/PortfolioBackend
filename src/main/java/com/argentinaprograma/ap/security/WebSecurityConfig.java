@@ -36,8 +36,6 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic()
-                .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
@@ -63,5 +61,11 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+
+
+    public static void main(String[]args){
+        System.out.println("pass: " + new BCryptPasswordEncoder().encode("liria2012"));
     }
 }

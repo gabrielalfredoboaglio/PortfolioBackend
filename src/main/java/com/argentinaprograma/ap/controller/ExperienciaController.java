@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @RequestMapping("/api/experiencia")
-
+@CrossOrigin(origins = "https://frontend-ang.web.app")
 public class ExperienciaController {
     private final ExperienciaService experienciaService;
 

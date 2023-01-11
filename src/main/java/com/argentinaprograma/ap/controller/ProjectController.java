@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @RequestMapping("/api/project")
-
+@CrossOrigin(origins = "https://frontend-ang.web.app")
 public class ProjectController {
     @Autowired
     private final ProjectService projectService;

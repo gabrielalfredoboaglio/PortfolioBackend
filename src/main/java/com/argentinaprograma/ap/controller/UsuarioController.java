@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/usuario")
-@CrossOrigin(origins = "https://frontend-ang.web.app")
+
 public class UsuarioController {
     private final UsuarioService usuarioService;
 
@@ -25,6 +25,12 @@ public class UsuarioController {
     public ResponseEntity<Usuario> editarUsuario(@RequestBody Usuario usuario){
         Usuario updateUsuario=usuarioService.editarUsuario(usuario);
         return new ResponseEntity<>(updateUsuario,HttpStatus.OK);
+    }
+
+    @PostMapping("/add")
+    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario){
+Usuario newuser= usuarioService.addUser(usuario.getNombre(), usuario.getEmail(), usuario.getPassword());
+return new ResponseEntity<>(newuser, HttpStatus.CREATED);
     }
 
       }

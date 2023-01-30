@@ -42,21 +42,10 @@ public class Usuario implements Serializable {
 
     public Usuario() {
     }
-
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String fotoPerfil, String email, String localidad, String fechaNac, String fotoHeader, String profesionHeader, String nombreHeader, String password) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        this.fotoPerfil = fotoPerfil;
-        this.email = email;
-        this.localidad = localidad;
-        this.fechaNac = fechaNac;
-        this.fotoHeader = fotoHeader;
-        this.profesionHeader = profesionHeader;
-        this.nombreHeader = nombreHeader;
-        this.password = password;
+    public Usuario( String nombre, String email, String password){
+       this.nombre = nombre;
+       this.email = email;
+       this.password = password;
     }
 
     public Long getId() {
@@ -75,84 +64,12 @@ public class Usuario implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getFotoPerfil() {
-        return fotoPerfil;
-    }
-
-    public void setFotoPerfil(String fotoPerfil) {
-        this.fotoPerfil = fotoPerfil;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getLocalidad() {
-        return localidad;
-    }
-
-    public void setLocalidad(String localidad) {
-        this.localidad = localidad;
-    }
-
-    public String getFechaNac() {
-        return fechaNac;
-    }
-
-    public void setFechaNac(String fechaNac) {
-        this.fechaNac = fechaNac;
-    }
-
-    public String getFotoHeader() {
-        return fotoHeader;
-    }
-
-    public void setFotoHeader(String fotoHeader) {
-        this.fotoHeader = fotoHeader;
-    }
-
-    public String getProfesionHeader() {
-        return profesionHeader;
-    }
-
-    public void setProfesionHeader(String profesionHeader) {
-        this.profesionHeader = profesionHeader;
-    }
-
-    public String getNombreHeader() {
-        return nombreHeader;
-    }
-
-    public void setNombreHeader(String nombreHeader) {
-        this.nombreHeader = nombreHeader;
+    public String setEmail() {
+        return email;
     }
 
     public String getPassword() {
@@ -162,4 +79,6 @@ public class Usuario implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }

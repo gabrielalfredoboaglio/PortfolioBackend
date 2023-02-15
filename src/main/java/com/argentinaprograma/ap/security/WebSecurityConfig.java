@@ -35,16 +35,10 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
 
         return http
                 .csrf().disable()
-                /*.authorizeRequests()
-                .antMatchers("/**")
 
-                .permitAll()
-                //.antMatchers(HttpMethod.GET,"/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/**").permitAll()
-                .and()*/
                 .authorizeRequests()
-                .anyRequest()
-                .authenticated()
+                .antMatchers("/api/usuario/**").permitAll()
+                .anyRequest().authenticated()
                 .and()
                 .httpBasic()
                 .and()
@@ -52,7 +46,7 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilter(jwtAuthenticationFilter)
-                .addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtAuthorizationFilter, JWTAuthenticationFilter.class)
                 .build();
 
 

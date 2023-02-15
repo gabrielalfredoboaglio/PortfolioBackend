@@ -13,10 +13,10 @@ public class TokenUtils {
 
     private final static String ACCESS_TOKEN_SECRET = "4qhq8LrEBfYcaRHxhdb9zURb2rf8e7Ud";
 
-    private static Long ACCES_TOKEN_VALIDITY_SECONDS = 12_592_000L;
+    private static Long ACCES_TOKEN_VALIDITY_SECONDS = 24 * 60 * 60L; //24 hours
 
     public static String createToken(String nombre, String email){
-        long expirationTime = ACCES_TOKEN_VALIDITY_SECONDS * 1_000;
+        long expirationTime = ACCES_TOKEN_VALIDITY_SECONDS * 1000;
         Date expirationDate = new Date(System.currentTimeMillis()+ expirationTime);
 
 

@@ -20,20 +20,23 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         AuthCredentials authCredentials = new AuthCredentials();
         try {
-            authCredentials = new ObjectMapper().readValue(request.getReader(), AuthCredentials.class);
-            return super.attemptAuthentication(request, response);
-        } catch (IOException e) {
+            authCredentials = new ObjectMapper().readValue(request.getInputStream(), AuthCredentials.class);
+            UsernamePasswordAuthenticationToken authToken =  new UsernamePasswordAuthenticationToken(
+                    authCredentials.getEmail(), authCredentials.getPassword());
 
+            return getAuthenticationManager().authenticate(authToken);
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
 
         }
 
 
-        UsernamePasswordAuthenticationToken usernamePAT = new UsernamePasswordAuthenticationToken(
+        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                 authCredentials.getEmail(),
                 authCredentials.getPassword(),
                 Collections.emptyList()
         );
-        return getAuthenticationManager().authenticate(usernamePAT);
+        return getAuthenticationManager().authenticate(authToken);
     }
 
     @Override

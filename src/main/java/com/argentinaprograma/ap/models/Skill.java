@@ -2,11 +2,14 @@ package com.argentinaprograma.ap.models;
 
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
 @Table(name = "skill")
+@Data
 public class Skill implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,46 +22,6 @@ public class Skill implements Serializable {
     @Column(name = "percent", nullable = false)
     private int percent;
 
-    public Skill() {
-    }
 
-    public Skill(Long idSkill, String skillName, String picSkill, int percent) {
-        this.idSkill = idSkill;
-        this.skillName = skillName;
-        this.picSkill = picSkill;
-        this.percent = percent;
-    }
-
-    public Long getIdSkill() {
-        return idSkill;
-    }
-
-    public void setIdSkill(Long idSkill) {
-        this.idSkill = idSkill;
-    }
-
-    public String getSkillName() {
-        return skillName;
-    }
-
-    public void setSkillName(String skillName) {
-        this.skillName = skillName;
-    }
-
-    public String getPicSkill() {
-        return picSkill;
-    }
-
-    public void setPicSkill(String picSkill) {
-        this.picSkill = picSkill;
-    }
-
-    public int getPercent() {
-        return percent;
-    }
-
-    public void setPercent(int percent) {
-        this.percent = percent;
-    }
 }
 

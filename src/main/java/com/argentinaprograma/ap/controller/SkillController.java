@@ -11,14 +11,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/skill")
-@CrossOrigin(origins = "https://frontend-ang.web.app")
+
 public class SkillController {
     @Autowired
-    private final SkillService skillService;
+    private  SkillService skillService;
 
-    public SkillController(SkillService skillService) {
-        this.skillService = skillService;
-    }
+
 
     @GetMapping("/all")
     public ResponseEntity<List<Skill>> getAllSkill(){

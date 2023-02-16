@@ -35,9 +35,9 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
 
         return http
                 .csrf().disable()
-
                 .authorizeRequests()
                 .antMatchers("/api/usuario/**").permitAll()
+                .antMatchers(HttpMethod.GET,"/api/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic()
@@ -48,10 +48,6 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
                 .addFilter(jwtAuthenticationFilter)
                 .addFilterBefore(jwtAuthorizationFilter, JWTAuthenticationFilter.class)
                 .build();
-
-
-
-
 
     }
 
@@ -67,13 +63,9 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
     }
 
 
-
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
-
-
-
 
 }

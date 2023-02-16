@@ -1,15 +1,11 @@
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\models\Educacion.java
-C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\models\Header.java
-C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\services\HeaderService.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\ApApplication.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\security\JWTAuthenticationFilter.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\controller\EducacionController.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\models\Experiencia.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\controller\SkillController.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\repository\ExperienciaRepo.java
-C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\repository\HeaderRepo.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\repository\UsuarioRepo.java
-C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\config\CorsConfig.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\repository\ProjectRepo.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\services\SkillService.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\models\Skill.java
@@ -31,4 +27,3 @@ C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\con
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\security\WebSecurityConfig.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\controller\ExperienciaController.java
 C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\security\UserDetailsServiceImpl.java
-C:\Users\gabo_\OneDrive\Escritorio\ap\src\main\java\com\argentinaprograma\ap\controller\HeaderController.java

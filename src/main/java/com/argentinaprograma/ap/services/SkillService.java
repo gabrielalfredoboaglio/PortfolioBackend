@@ -2,6 +2,7 @@ package com.argentinaprograma.ap.services;
 
 import com.argentinaprograma.ap.models.Skill;
 import com.argentinaprograma.ap.repository.SkillRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -10,12 +11,10 @@ import java.util.List;
 @Service
 @Transactional
 public class SkillService {
+@Autowired
+    private  SkillRepo skillRepo;
 
-    private final SkillRepo skillRepo;
 
-    public SkillService(SkillRepo skillRepo) {
-        this.skillRepo = skillRepo;
-    }
 
     public Skill addSkill(Skill skill){
         return skillRepo.save(skill);

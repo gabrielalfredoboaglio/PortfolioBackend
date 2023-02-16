@@ -3,6 +3,7 @@ package com.argentinaprograma.ap.controller;
 
 import com.argentinaprograma.ap.models.Experiencia;
 import com.argentinaprograma.ap.services.ExperienciaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,13 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @RequestMapping("/api/experiencia")
-@CrossOrigin(origins = "https://frontend-ang.web.app")
-public class ExperienciaController {
-    private final ExperienciaService experienciaService;
 
-    public ExperienciaController(ExperienciaService experienciaService) {
-        this.experienciaService = experienciaService;
-    }
+public class ExperienciaController {
+
+    @Autowired
+    private ExperienciaService experienciaService;
+
     @PutMapping("/update")
     public ResponseEntity<Experiencia> editarExperiencia(@RequestBody Experiencia experiencia){
         Experiencia updateExperiencia=experienciaService.editarExperiencia(experiencia);

@@ -11,11 +11,8 @@ import java.util.List;
 @Service
 @Transactional
 public class EducacionService {
-    private final EducacionRepo educacionRepo;
     @Autowired
-    public EducacionService(EducacionRepo educacionRepo) {
-        this.educacionRepo = educacionRepo;
-    }
+    private EducacionRepo educacionRepo;
 
     public Educacion addEducacion(Educacion educacion){
         return  educacionRepo.save(educacion);

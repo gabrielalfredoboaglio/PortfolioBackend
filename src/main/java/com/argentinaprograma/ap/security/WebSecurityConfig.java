@@ -20,6 +20,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 @AllArgsConstructor
 @Configuration
 @EnableWebSecurity
@@ -37,7 +40,14 @@ private final JWTAuthorizationFilter jwtAuthorizationFilter;
 
 
         return http
-                .cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues()).and()
+                .cors().configurationSource(request -> {
+                    CorsConfiguration config = new CorsConfiguration();
+                    config.setAllowedOrigins(Collections.singletonList("*"));
+                    config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+                    config.setAllowedHeaders(Collections.singletonList("*"));
+                    return config;
+                })
+                .and()
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/api/usuario/**").permitAll()

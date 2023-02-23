@@ -33,7 +33,7 @@ public class SkillController {
         Skill updateSkill=skillService.updateSkill(project);
         return new ResponseEntity<>(updateSkill,HttpStatus.OK);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteSkill(@PathVariable("id") Long id){
         skillService.deleteSkill(id);
         return new ResponseEntity<>(HttpStatus.OK);

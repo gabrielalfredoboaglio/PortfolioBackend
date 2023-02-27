@@ -13,7 +13,6 @@ com\argentinaprograma\ap\services\ProjectService.class
 com\argentinaprograma\ap\models\Project.class
 com\argentinaprograma\ap\security\JWTAuthenticationFilter.class
 com\argentinaprograma\ap\repository\ExperienciaRepo.class
-com\argentinaprograma\ap\ApApplication$1.class
 com\argentinaprograma\ap\security\JWTAuthorizationFilter.class
 com\argentinaprograma\ap\controller\EducacionController.class
 com\argentinaprograma\ap\controller\UsuarioController.class
